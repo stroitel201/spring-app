@@ -8,7 +8,7 @@ public class TestSpring {
                 "applicationContext.xml"
         );
 
-        MusicPlayer musicPlayer = new MusicPlayer(context.getBean("musicBean", Music.class));
+        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 
         musicPlayer.playMusic();
 
