@@ -14,6 +14,7 @@ public class TestSpring {
         Computer computer = context.getBean("computer", Computer.class);
 
         computer.startPlayer();
+        context.close();
 
     }
 

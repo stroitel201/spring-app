@@ -12,7 +12,7 @@ public class EDMMusic implements Music{
     private List<String> songList = Arrays.asList("Poison", "Virus", "Bangarang");
 
     @Override
-    public List<String> getSong() {
+    public List<String> getSongs() {
         return songList;
     }
 }

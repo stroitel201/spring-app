@@ -16,7 +16,7 @@ public class ClassicalMusic implements Music {
     }
 
     @Override
-    public String getSong() {
+    public String getSongs() {
         return "Hungarian Rhapsody";
     }
 }

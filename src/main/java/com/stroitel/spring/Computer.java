@@ -12,5 +12,6 @@ public class Computer {
     public void startPlayer(){
         musicPlayer.playMusic(MusicPlayer.MusicGenre.EDM);
         musicPlayer.playMusic(MusicPlayer.MusicGenre.ROCK);
+        System.out.println(musicPlayer.getName() + " " + musicPlayer.getVolume());
     }
 }
