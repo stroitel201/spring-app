@@ -11,6 +11,14 @@ public class MusicPlayer {
         return musicList;
     }
 
+    private void initMethod(){
+        System.out.println("init");
+    }
+
+    private void destroyMethod(){
+        System.out.println("destroy");
+    }
+
     public void setMusicList(List<Music> musicList) {
         this.musicList = musicList;
     }

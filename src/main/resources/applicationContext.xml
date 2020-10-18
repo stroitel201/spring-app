@@ -11,7 +11,8 @@
     <context:property-placeholder location="musicPlayer.properties"/>
 
     <bean id="musicClassBean"
-          class="com.stroitel.spring.ClassicalMusic">
+          class="com.stroitel.spring.ClassicalMusic"
+          factory-method="getInstance">
     </bean>
 
     <bean id="musicRockBean"
@@ -23,7 +24,10 @@
     </bean>
 
     <bean id="musicPlayer"
-          class="com.stroitel.spring.MusicPlayer">
+          class="com.stroitel.spring.MusicPlayer"
+          scope="prototype"
+          init-method="initMethod"
+          destroy-method="destroyMethod">
         <property name="musicList">
             <list>
                 <ref bean="musicClassBean"/>
