@@ -1,10 +1,25 @@
 package com.stroitel.spring;
 
-import java.util.ArrayList;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+
+import java.util.Arrays;
 import java.util.List;
 
+@Component
 public class MusicPlayer {
 
+    private Music music;
+
+    @Autowired
+    private EDMMusic edmMusic;
+
+    public EDMMusic getEdmMusic() {
+        return edmMusic;
+    }
+
+    @Autowired
     private List<Music> musicList;
 
     public List<Music> getMusicList() {
@@ -43,13 +58,20 @@ public class MusicPlayer {
         this.volume = volume;
     }
 
-    public MusicPlayer(){}
+
+    public MusicPlayer(){
+
+    }
 
     public void playMusic(){
         for (Music music:
              musicList) {
             System.out.println("Playing: " + music.getSong());
         }
+    }
+
+    public void playSong(){
+        System.out.println(music.getSong());
     }
 
 }

@@ -4,39 +4,9 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
-    <context:property-placeholder location="musicPlayer.properties"/>
-
-    <bean id="musicClassBean"
-          class="com.stroitel.spring.ClassicalMusic"
-          factory-method="getInstance">
-    </bean>
-
-    <bean id="musicRockBean"
-          class="com.stroitel.spring.RockMusic">
-    </bean>
-
-    <bean id="musicEDMBean"
-          class="com.stroitel.spring.EDMMusic">
-    </bean>
-
-    <bean id="musicPlayer"
-          class="com.stroitel.spring.MusicPlayer"
-          scope="prototype"
-          init-method="initMethod"
-          destroy-method="destroyMethod">
-        <property name="musicList">
-            <list>
-                <ref bean="musicClassBean"/>
-                <ref bean="musicEDMBean"/>
-                <ref bean="musicRockBean"/>
-            </list>
-        </property>
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
-    </bean>
-
+        <context:component-scan base-package="com.stroitel.spring"/>
 </beans>
