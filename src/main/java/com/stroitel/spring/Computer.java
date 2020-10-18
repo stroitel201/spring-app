@@ -10,6 +10,7 @@ public class Computer {
     private MusicPlayer musicPlayer;
 
     public void startPlayer(){
-        musicPlayer.playMusic();
+        musicPlayer.playMusic(MusicPlayer.MusicGenre.EDM);
+        musicPlayer.playMusic(MusicPlayer.MusicGenre.ROCK);
     }
 }

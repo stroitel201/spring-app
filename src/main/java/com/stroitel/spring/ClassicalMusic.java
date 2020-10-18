@@ -1,8 +1,10 @@
 package com.stroitel.spring;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
+
+/*
 public class ClassicalMusic implements Music {
 
     private ClassicalMusic(){
@@ -18,3 +20,4 @@ public class ClassicalMusic implements Music {
         return "Hungarian Rhapsody";
     }
 }
+*/
