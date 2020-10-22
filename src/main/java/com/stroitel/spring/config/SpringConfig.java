@@ -12,6 +12,9 @@ import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
+import java.util.HashSet;
+import java.util.Vector;
+
 @Configuration
 @ComponentScan("com.stroitel.spring")
 @EnableWebMvc
@@ -46,6 +49,5 @@ public class SpringConfig implements WebMvcConfigurer {
         ThymeleafViewResolver resolver = new ThymeleafViewResolver();
         resolver.setTemplateEngine(templateEngine());
         registry.viewResolver(resolver);
-
     }
 }
